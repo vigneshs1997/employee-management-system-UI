@@ -4,14 +4,14 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ListEmployeeComponent from './components/ListEmployeeComponent'
+import HelloWorld from './HelloWorld'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <ListEmployeeComponent />
+      <HelloWorld />
     </>
   )
 }
