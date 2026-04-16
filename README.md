@@ -106,3 +106,39 @@ npm install bootstrap --save
 ### 4. Change ListEmployeeComponent to display Response of the REST API (List of Employees)
 
 ### 5. Test the above changes
+
+# Merge issue
+
+unfortunately i merged code from F001 to main instead of dev. The component folder is present in the main branch. I could not inherit the component folder from the main to dev with (git pull origin main).
+
+## Step 1
+
+  Please commit the recent changes in the branch you are working first
+  git branch => F002
+  git add .
+  git commit -m "Message"
+
+## Step 2
+
+  Pull the recent code from the main
+  git pull main
+
+## Step 3
+
+  Move to dev branch
+  git checkout dev
+
+## Step 4
+  To know what are all the commits
+  git log --name-only
+  git log --oneline
+## Step 5
+
+  Pick the Component module commit with the main branch with id of e230970 (Component module push to main)
+  ![alt text](image-1.png)
+  git cherry-pick e230970
+
+## Step 6
+
+  Push the pulled code by using cherry-pick to dev
+  git push origin dev
