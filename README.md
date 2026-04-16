@@ -142,3 +142,29 @@ unfortunately i merged code from F001 to main instead of dev. The component fold
 
   Push the pulled code by using cherry-pick to dev
   git push origin dev
+
+## Adding Header and Footer to React App
+
+### 1. Create HeaderComponent (functional component)
+
+### 2. Import and Use HeaderComponent in App Component
+
+### 3. Create FooterComponent (functional component)
+
+### 4. Import and Use FooterComponent in App Component
+
+## Semantic elements are HTML tags that clearly describe their meaning and purpose
+
+### <header>
+
+### <footer>
+
+### <section>
+
+### <article>
+
+## Bootstrap 5
+
+### container, table, nav bar
+
+## Error: className instead fo class => did you mean className?
