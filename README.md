@@ -56,6 +56,10 @@ git pull origin main --allow-unrelated-histories
 
 git push -u origin main
 
+### If you don’t want this Vim screen
+
+git --no-pager branch
+
 ## Crome Extension
 
 React Developer Tool
@@ -72,7 +76,7 @@ React Developer Tool
 export default HelloWorld;
 
 ## Installing Bootstrap
-
+Bootstrap is a CSS framework to style the web application.
 npm install bootstrap --save
 
  *bootstrap.min.css => Import inside app module
@@ -169,12 +173,29 @@ unfortunately i merged code from F001 to main instead of dev. The component fold
 
 ## Error: className instead fo class => did you mean className?
 
-# Add Employee Feature - Create React EmployeeComponent
+# Configure Routing  in a React App(Development Steps)
 
-## 1. Create React Functional Component - EmployeeComponent
+## 1. Install react-router-dom library using NPM 
 
-## 2. Add "Add Employee" button in ListEmployeeComponent
+### npm install react-router-dom --save
 
-## 3. Configure Route for EmployeeCoponent
+## 2. Configure Routing in App Component
 
-## 4. Test the above changes
+### import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+## 3. Configure Route for ListEmployeeComponent
+
+<>
+      <BrowserRouter>
+        <HeaderComponent />
+        <Routes>
+                   {/*http://localhost:3000*/}
+          <Route path='/' element={<ListEmployeeComponent />} ></Route>
+                   {/*http://localhost:3000/employees*/}
+          <Route path='/employees' element={<ListEmployeeComponent />}></Route>
+        </Routes>
+        <FooterComponent />
+      </BrowserRouter>
+    </>
+
+## 4. Test Route for ListEmployeeComponent
