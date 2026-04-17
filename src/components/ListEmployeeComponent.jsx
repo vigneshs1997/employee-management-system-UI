@@ -1,12 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import { listEmployees } from '../services/EmployeeService';
-import { useNavigate } from 'react-router-dom';
 
 const ListEmployeeComponent = () => {
 
   const [employees, setEmployees] = useState([]);
-
-  const navigator = useNavigate();
 
   useEffect(() => {
     // Call the API to fetch employee data
@@ -18,7 +15,7 @@ const ListEmployeeComponent = () => {
   }, []);// Empty dependency array means this effect runs once when the component mounts
   
   function addNewEmployee(){
-    navigator('/add-employee');
+    
   }
   /*=======================================Dummy Data==========================================*/
 

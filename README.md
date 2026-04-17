@@ -147,11 +147,6 @@ unfortunately i merged code from F001 to main instead of dev. The component fold
   Push the pulled code by using cherry-pick to dev
   git push origin dev
 
-## Step 7
-
-  Inoder to avoid opening pager when we use the command like
-  git --no-pager branch
-
 ## Adding Header and Footer to React App
 
 ### 1. Create HeaderComponent (functional component)
