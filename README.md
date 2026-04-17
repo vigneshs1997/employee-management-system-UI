@@ -56,6 +56,10 @@ git pull origin main --allow-unrelated-histories
 
 git push -u origin main
 
+### If you don’t want this Vim screen
+
+git --no-pager branch
+
 ## Crome Extension
 
 React Developer Tool
@@ -72,7 +76,7 @@ React Developer Tool
 export default HelloWorld;
 
 ## Installing Bootstrap
-
+Bootstrap is a CSS framework to style the web application.
 npm install bootstrap --save
 
  *bootstrap.min.css => Import inside app module
@@ -168,3 +172,30 @@ unfortunately i merged code from F001 to main instead of dev. The component fold
 ### container, table, nav bar
 
 ## Error: className instead fo class => did you mean className?
+
+# Configure Routing  in a React App(Development Steps)
+
+## 1. Install react-router-dom library using NPM 
+
+### npm install react-router-dom --save
+
+## 2. Configure Routing in App Component
+
+### import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+## 3. Configure Route for ListEmployeeComponent
+
+<>
+      <BrowserRouter>
+        <HeaderComponent />
+        <Routes>
+                   {/*http://localhost:3000*/}
+          <Route path='/' element={<ListEmployeeComponent />} ></Route>
+                   {/*http://localhost:3000/employees*/}
+          <Route path='/employees' element={<ListEmployeeComponent />}></Route>
+        </Routes>
+        <FooterComponent />
+      </BrowserRouter>
+    </>
+
+## 4. Test Route for ListEmployeeComponent
