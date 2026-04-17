@@ -242,3 +242,13 @@ unfortunately i merged code from F001 to main instead of dev. The component fold
 ## Step 3: Push
 
 ### git push origin dev
+
+# Add Employee Feature - Add Employee Form Handling
+
+## Define state variables (firstName, lastName, and email) in EmployeeComponent using useState Hook.
+
+## Design Add Employee Form using HTML and Bootstrap
+
+## Create JavaScript Function to handle onClick Event (Form Submit)
+
+## Test React App (print form data in browser console)
