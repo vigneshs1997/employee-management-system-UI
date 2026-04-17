@@ -72,7 +72,7 @@ React Developer Tool
 export default HelloWorld;
 
 ## Installing Bootstrap
-
+Bootstrap is a CSS framework to style the web application.
 npm install bootstrap --save
 
  *bootstrap.min.css => Import inside app module
