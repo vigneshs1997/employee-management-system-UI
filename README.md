@@ -199,3 +199,23 @@ unfortunately i merged code from F001 to main instead of dev. The component fold
     </>
 
 ## 4. Test Route for ListEmployeeComponent
+
+# Revert last the merge commit with dev
+
+## Step 1: Go to dev
+
+### git checkout dev
+
+## Step 2: Find merge commit
+
+### git log --oneline
+
+## Step 3: Revert it
+
+### git revert -m 1 <merge_commit_id> or git revert -m 1 abc1234
+
+-m 1 = keep dev as main parent
+
+## Step 4: Push
+
+### git push origin dev
