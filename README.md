@@ -252,3 +252,21 @@ unfortunately i merged code from F001 to main instead of dev. The component fold
 ## Create JavaScript Function to handle onClick Event (Form Submit)
 
 ## Test React App (print form data in browser console)
+
+# How to merge F006 into dev
+
+## Step 1: Switch to dev
+
+### git checkout dev
+
+## Step 2: Pull latest dev (important)
+
+### git pull origin dev
+
+## Step 3: Merge F006
+
+### git merge F006
+
+## Step 4: Push
+
+### git push origin dev
