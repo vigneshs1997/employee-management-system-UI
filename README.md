@@ -270,3 +270,13 @@ unfortunately i merged code from F001 to main instead of dev. The component fold
 ## Step 4: Push
 
 ### git push origin dev
+
+# Add Employee Feature - Connect React to Add Employee REST API
+
+## 1. In EmployeeService, write a code to call Add Employee REST API using axios
+
+## 2. Change EmployeeComponent to call EmployeeService method
+
+## 3. Navigate to List Employee Page After Form Submission Done
+
+## 4. Test above changes

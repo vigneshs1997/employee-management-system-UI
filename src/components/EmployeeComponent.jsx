@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
-
+import { createNewEmployee } from '../services/EmployeeService';
+import { useNavigate } from 'react-router-dom'; 
 const EmployeeComponent = () => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
+
+    const navigator = useNavigate();
 
     const handleLastName = (e) => setLastName(e.target.value);
     
@@ -12,6 +15,13 @@ const EmployeeComponent = () => {
          
         const employee = { firstName, lastName, email };
         console.log(employee);
+
+        createNewEmployee(employee).then((response) => { //return a promise and  handle the response in the block
+            console.log(response.data);
+            navigator('/employees'); //navigate to the list of employees page after successful creation
+        });
+
+        
     }
   return (
       <div className='container'>
