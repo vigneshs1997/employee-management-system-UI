@@ -224,3 +224,21 @@ unfortunately i merged code from F001 to main instead of dev. The component fold
 ## Step 4: Push
 
 ### git push origin dev
+
+# Re-merge your feature branch (F005)
+
+## Step 1: Go to dev
+
+### git checkout dev
+
+## Step 2: Find merge commit
+
+### git log --oneline
+
+## Step 3: Revert the revert
+
+### git revert ecd6268
+
+## Step 3: Push
+
+### git push origin dev
