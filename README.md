@@ -280,3 +280,15 @@ unfortunately i merged code from F001 to main instead of dev. The component fold
 ## 3. Navigate to List Employee Page After Form Submission Done
 
 ## 4. Test above changes
+
+# Add Employee Feature - Add Employee From Validation
+
+## 1. Use the (useState) hook to initialize state variable that will hold validation errors
+
+## 2. Write a validation function that checks the form data and  return validation errors
+
+## 3. Validate Form on Submission
+
+## 4. Display Validation Errors
+
+## 5. Test above changes

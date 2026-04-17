@@ -6,6 +6,11 @@ const EmployeeComponent = () => {
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
 
+    const [errors,setErrors]=useState({
+        firstName: '',
+        lastName: '',
+        email: ''
+    });
     const navigator = useNavigate();
 
     const handleLastName = (e) => setLastName(e.target.value);
@@ -13,16 +18,45 @@ const EmployeeComponent = () => {
     const saveEmployee = (e) => {
         e.preventDefault();//Stop the default behaviour of the form to submit and refresh the page
          
-        const employee = { firstName, lastName, email };
+        if (validateForm()) {
+           const employee = { firstName, lastName, email };
         console.log(employee);
 
         createNewEmployee(employee).then((response) => { //return a promise and  handle the response in the block
             console.log(response.data);
             navigator('/employees'); //navigate to the list of employees page after successful creation
-        });
-
-        
+        }); 
+        }        
     }
+    function validateForm() {
+        let valid = true; // let variable will be changed always
+
+        // Inoder to copy object into another variable we can use spread operator
+        const errorsCopy = { ...errors }
+        
+        if (firstName.trim()) {// If first name is not empty
+            errorsCopy.firstName = '';
+        } else {
+            errorsCopy.firstName = 'First name is required';
+            valid = false; // valid flag will be false if any of the field is invalid
+        }
+
+        if (lastName.trim()) {
+            errorsCopy.lastName = '';
+        } else {
+            errorsCopy.lastName = 'Last name is required';
+            valid = false;
+        }
+
+        if (email.trim()) {
+            errorsCopy.email = '';
+        } else {
+            errorsCopy.email = 'Email is required';
+            valid = false;
+        }
+        setErrors(errorsCopy); // update the errors state with the new error messages
+        return valid; // return the valid flag to indicate whether the form is valid or not
+    } 
   return (
       <div className='container'>
           <br />
@@ -38,9 +72,10 @@ const EmployeeComponent = () => {
                                   placeholder='Enter Employee First Name'
                                   name='firstName'
                                   value={firstName}
-                                  className='form-control'
+                                  className={`form-control ${errors.firstName ? 'is-invalid' :  ''}`}
                                   onChange={(e) => setFirstName(e.target.value)}
                               />
+                              {errors.firstName && <div className='invalid-feedback'>{errors.firstName}</div>}
                           </div>
                           <div className='form-group mb-2'>
                               <label className='form-label'>Last Name:</label>
@@ -49,9 +84,10 @@ const EmployeeComponent = () => {
                                   placeholder='Enter Employee Last Name'
                                   name='lastName'
                                   value={lastName}
-                                  className='form-control'
+                                  className={`form-control ${errors.lastName ? 'is-invalid' :  ''}`}
                                   onChange={handleLastName}
                               />
+                              {errors.lastName && <div className='invalid-feedback'>{errors.lastName}</div>}
                           </div>
                           <div className='form-group mb-2'>
                               <label className='form-label'>Email</label>
@@ -60,9 +96,10 @@ const EmployeeComponent = () => {
                                   placeholder='Enter Email'
                                   name='email'
                                   value={email}
-                                  className='form-control'
+                                  className={`form-control ${errors.email ? 'is-invalid' :  ''}`}
                                   onChange={(e) =>setEmail(e.target.value)}
                               />
+                              {errors.email && <div className='invalid-feedback'>{errors.email}</div>}
                           </div>
                           <button className='btn btn-success' onClick={saveEmployee}>Submit</button>
                         </form>
