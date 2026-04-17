@@ -168,3 +168,13 @@ unfortunately i merged code from F001 to main instead of dev. The component fold
 ### container, table, nav bar
 
 ## Error: className instead fo class => did you mean className?
+
+# Add Employee Feature - Create React EmployeeComponent
+
+## 1. Create React Functional Component - EmployeeComponent
+
+## 2. Add "Add Employee" button in ListEmployeeComponent
+
+## 3. Configure Route for EmployeeCoponent
+
+## 4. Test the above changes
